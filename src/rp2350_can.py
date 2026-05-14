@@ -15,7 +15,7 @@ XL2515_INT_PIN = 8
 ################################################################
 ## FRC CAN Constants
 FRC_MANUFACTURER = 8  # Team Use
-FRC_DEFAULT_DEVICE_TYPE = 11  # IO Breakout
+FRC_DEFAULT_DEVICE_TYPE = 10  # Misc - Team Device Type
 
 ## HERMES DEFAULTS:
 HERMES_DEFAULT_DEVICE_NUMBER = 1
