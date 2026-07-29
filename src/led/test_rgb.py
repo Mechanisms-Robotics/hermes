@@ -2,7 +2,7 @@ from machine import Pin
 from neopixel import NeoPixel
 import time
 
-num_leds = 40
+num_leds = 80
 np = NeoPixel(Pin(2), num_leds)
 
 def clear_leds():
@@ -18,7 +18,10 @@ off = (0,0,0)
 
 colors = [
     (20, 0, 0),
+    (20, 0, 0),
     (0, 20, 0),
+    (0, 20, 0),
+    (0, 0, 20),
     (0, 0, 20)
     ]
 
