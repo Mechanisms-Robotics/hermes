@@ -35,26 +35,18 @@ white = (20, 20, 15)
 # Mech Colors
 mech_colors = [
     white,
-    gold,
-    white,
-    gold,
-    white,
-    gold,
-    white,
-    gold,
-    white,
     gold
 ]
 
 # Build up the mech colors first (LEDs 0-6)
-for step in range(len(mech_colors)):
+for step in range(num_leds):
     # Turn all off
     for j in range(num_leds):
         set_led(j, off)
     
     # Light up LEDs 0 through step with rainbow colors
     for i in range(step + 1):
-        set_led(i, mech_colors[i])
+        set_led(i, mech_colors[i%2])
     
     np.write()
     time.sleep(0.1)
