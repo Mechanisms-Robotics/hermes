@@ -1,3 +1,4 @@
+# majorly unfinished. DO NOT USE.
 from machine import Pin
 from neopixel import NeoPixel
 import time

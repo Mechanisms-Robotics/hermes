@@ -34,36 +34,29 @@ white = (20, 20, 15)
 
 # Mech Colors
 mech_colors = [
-    white,
-    gold
+    white
 ]
 
 # Build up the mech colors first (LEDs 0-6)
-for step in range(num_leds):
-    # Turn all off
-    for j in range(num_leds):
-        set_led(j, off)
-    
-    # Light up LEDs 0 through step with rainbow colors
-    for i in range(step + 1):
-        set_led(i, mech_colors[i%2])
-    
+for i in range(0,100,2):
+    set_led(i, mech_colors[0])
     np.write()
     time.sleep(0.1)
+
+# for i in range(num_leds):
+#     
+#     set_led(i, mech_colors[0])
+#     
+#     np.write()
+#     time.sleep(0.1)
 
 # Now scroll the complete mech colors across the strip
 # since we already have the mech colors at position 0, this loop
 # starts at position 1
-for position in range(1, num_leds - len(mech_colors) + 1):
-    # Turn all off
-    for j in range(num_leds):
-        set_led(j, off)
-        
-    # Draw rainbow starting at position
-    for i in range(len(mech_colors)):
-        set_led(position + i, mech_colors[i])
-    
-    np.write()
-    time.sleep(0.1)
+# for position in range(1, num_leds - len(mech_colors) + 1):
+#     set_led(position, get_led(position-1))
+#     
+#     np.write()
+#     time.sleep(0.1)
 
 clear_leds()
